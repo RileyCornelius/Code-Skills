@@ -1,5 +1,5 @@
 ---
-name: code-review
+name: code-reviewing
 description: Use when prompted to review or finishing a completing tasks, implementing major features.
 ---
 

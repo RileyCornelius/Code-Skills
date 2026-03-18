@@ -1,6 +1,6 @@
 ---
-name: debugging
-description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+name: code-debugging
+description: Use when encountering any bug, test failure, or unexpected behavior. Follow the systematic debugging process to find root cause before proposing fixes. Do not skip steps or propose fixes without understanding the issue.
 ---
 
 # Systematic Debugging
