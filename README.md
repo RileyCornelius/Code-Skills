@@ -5,9 +5,9 @@ Reusable coding skills for AI agents.
 ## Available Skills
 
 - `code-brainstorming`: Turn coding ideas into approved designs and planning-ready implementation briefs before coding starts.
-- `code-debugging`: Use when encountering a bug, test failure, or unexpected behavior before proposing fixes.
-- `code-reviewing`: Use when prompted to review or when finishing substantial implementation work.
-- `use-git-worktrees`: Use when feature work needs isolation from the current workspace.
+- `code-debugging`: Investigate bugs, failing tests, broken builds, and unexpected behavior before proposing fixes.
+- `code-reviewing`: Review code for correctness, regressions, testing gaps, and merge readiness.
+- `use-git-worktrees`: Create isolated git worktrees when feature work needs a separate workspace.
 
 ## Install With the `skills` CLI
 
@@ -23,20 +23,21 @@ List the skills exposed by this repository:
 npx skills add RileyCornelius/Code-Skills --list
 ```
 
-## Manual Install (Clone and Copy)
+## Manual Install
 
 ### Global Install
-
-Codex (`.agents`):
 
 ```bash
 git clone https://github.com/RileyCornelius/Code-Skills.git
 cp -r Code-Skills/skills/* ~/.agents/skills/
 ```
 
-Claude Code:
+Claude Code uses the same pattern with `~/.claude/skills` instead of `~/.agents/skills`.
+
+### Project Install
 
 ```bash
 git clone https://github.com/RileyCornelius/Code-Skills.git
-cp -r Code-Skills/skills/* ~/.claude/skills/
+mkdir -p .agents/skills
+cp -r Code-Skills/skills/* .agents/skills/
 ```

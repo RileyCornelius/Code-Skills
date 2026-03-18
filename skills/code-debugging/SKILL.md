@@ -1,6 +1,6 @@
 ---
 name: code-debugging
-description: Use when encountering any bug, test failure, or unexpected behavior. Follow the systematic debugging process to find root cause before proposing fixes. Do not skip steps or propose fixes without understanding the issue.
+description: Investigate bugs, failing tests, broken builds, performance regressions, and unexpected behavior by finding root cause before fixing. Use when something is failing or unclear, especially after unsuccessful fix attempts or when the cause is not yet proven.
 ---
 
 # Systematic Debugging
@@ -59,7 +59,7 @@ You MUST complete each phase before proceeding to the next.
    - Can you trigger it reliably?
    - What are the exact steps?
    - Does it happen every time?
-   - If not reproducible → gather more data, don't guess
+   - If not reproducible -> gather more data, don't guess
 
 3. **Check Recent Changes**
    - What changed that could cause this?
@@ -69,7 +69,7 @@ You MUST complete each phase before proceeding to the next.
 
 4. **Gather Evidence in Multi-Component Systems**
 
-   **WHEN system has multiple components (CI → build → signing, API → service → database):**
+   **WHEN system has multiple components (CI -> build -> signing, API -> service -> database):**
 
    **BEFORE proposing fixes, add diagnostic instrumentation:**
    ```
@@ -103,13 +103,13 @@ You MUST complete each phase before proceeding to the next.
    codesign --sign "$IDENTITY" --verbose=4 "$APP"
    ```
 
-   **This reveals:** Which layer fails (secrets → workflow ✓, workflow → build ✗)
+   **This reveals:** Which layer fails (secrets -> workflow [ok], workflow -> build [fail])
 
 5. **Trace Data Flow**
 
    **WHEN error is deep in call stack:**
 
-   See `root-cause-tracing.md` in this directory for the complete backward tracing technique.
+   See [references/root-cause-tracing.md](references/root-cause-tracing.md) for the complete backward tracing technique.
 
    **Quick version:**
    - Where does bad value originate?
@@ -155,7 +155,7 @@ You MUST complete each phase before proceeding to the next.
    - Don't fix multiple things at once
 
 3. **Verify Before Continuing**
-   - Did it work? Yes → Phase 4
+   - Did it work? Yes -> Phase 4
    - Didn't work? Form NEW hypothesis
    - DON'T add more fixes on top
 
@@ -190,7 +190,7 @@ You MUST complete each phase before proceeding to the next.
    - STOP
    - Count: How many fixes have you tried?
    - If < 3: Return to Phase 1, re-analyze with new information
-   - **If ≥ 3: STOP and question the architecture (step 5 below)**
+   - **If >= 3: STOP and question the architecture (step 5 below)**
    - DON'T attempt Fix #4 without architectural discussion
 
 5. **If 3+ Fixes Failed: Question Architecture**
@@ -228,7 +228,7 @@ If you catch yourself thinking:
 
 **If 3+ fixes failed:** Question the architecture (see Phase 4.5)
 
-## your human partner's Signals You're Doing It Wrong
+## Your Human Partner's Signals You're Doing It Wrong
 
 **Watch for these redirections:**
 - "Is that not happening?" - You assumed without verifying
@@ -249,7 +249,7 @@ If you catch yourself thinking:
 | "I'll write test after confirming fix works" | Untested fixes don't stick. Test first proves it. |
 | "Multiple fixes at once saves time" | Can't isolate what worked. Causes new bugs. |
 | "Reference too long, I'll adapt the pattern" | Partial understanding guarantees bugs. Read it completely. |
-| "I see the problem, let me fix it" | Seeing symptoms ≠ understanding root cause. |
+| "I see the problem, let me fix it" | Seeing symptoms != understanding root cause. |
 | "One more fix attempt" (after 2+ failures) | 3+ failures = architectural problem. Question pattern, don't fix again. |
 
 ## Quick Reference
@@ -274,10 +274,10 @@ If systematic investigation reveals issue is truly environmental, timing-depende
 
 ## Supporting Techniques
 
-These techniques are part of systematic debugging and available in this directory:
+These techniques are part of systematic debugging and available on demand:
 
-- **`root-cause-tracing.md`** - Trace bugs backward through call stack to find original trigger
-- **`defense-in-depth.md`** - Add validation at multiple layers after finding root cause
+- **[references/root-cause-tracing.md](references/root-cause-tracing.md)** - Trace bugs backward through call stack to find the original trigger
+- **[references/defense-in-depth.md](references/defense-in-depth.md)** - Add validation at multiple layers after finding root cause
 
 ## Real-World Impact
 

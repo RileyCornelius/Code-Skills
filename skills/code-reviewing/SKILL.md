@@ -1,14 +1,16 @@
 ---
 name: code-reviewing
-description: Use when prompted to review or finishing a completing tasks, implementing major features.
+description: Review code changes for correctness, regressions, security, maintainability, test coverage, and production readiness. Use when asked to review a PR, audit a diff, look for bugs or risks, assess merge readiness, or do a final pass after a substantial implementation.
 ---
 
 # Code Review
 
-You are reviewing code changes for production readiness.
+Review code changes for production readiness.
+
+Prioritize concrete findings over summary. Focus first on bugs, regressions, unsafe assumptions, and missing tests.
 
 **Your task:**
-1. Check code quality, architecture, testing
+1. Check correctness, code quality, architecture, and testing
 2. Categorize issues by severity
 3. Assess production readiness
 
@@ -70,6 +72,9 @@ You are reviewing code changes for production readiness.
 ### Recommendations
 [Improvements for code quality, architecture, or process]
 
+### Open Questions
+[Questions or assumptions that materially affect the review]
+
 ### Assessment
 
 **Ready to merge?** [Yes/No/With fixes]
@@ -82,6 +87,7 @@ You are reviewing code changes for production readiness.
 - Categorize by actual severity (not everything is Critical)
 - Be specific (file:line, not vague)
 - Explain WHY issues matter
+- Prefer findings over praise
 - Acknowledge strengths
 - Give clear verdict
 
@@ -125,9 +131,9 @@ You are reviewing code changes for production readiness.
 
 ### Assessment
 
-**Ready to merge: With fixes**
+**Ready to merge?** With fixes
 
-**Reasoning:** Core implementation is solid with good architecture and tests. Important issues (help text, date validation) are easily fixed and don't affect core functionality.
+**Reasoning:** Core implementation is solid with good architecture and tests. Important issues are easily fixed and don't affect core functionality.
 ```
 
 ## Red Flags

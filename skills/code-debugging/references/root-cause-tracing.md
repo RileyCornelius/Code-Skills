@@ -45,16 +45,16 @@ await execFileAsync('git', ['init'], { cwd: projectDir });
 ### 3. Ask: What Called This?
 ```typescript
 WorktreeManager.createSessionWorktree(projectDir, sessionId)
-  → called by Session.initializeWorkspace()
-  → called by Session.create()
-  → called by test at Project.create()
+  -> called by Session.initializeWorkspace()
+  -> called by Session.create()
+  -> called by test at Project.create()
 ```
 
 ### 4. Keep Tracing Up
 **What value was passed?**
 - `projectDir = ''` (empty string!)
 - Empty string as `cwd` resolves to `process.cwd()`
-- That's the source code directory!
+- That's the source code directory
 
 ### 5. Find Original Trigger
 **Where did empty string come from?**
@@ -92,7 +92,7 @@ npm test 2>&1 | grep 'DEBUG git init'
 **Symptom:** `.git` created in `packages/core/` (source code)
 
 **Trace chain:**
-1. `git init` runs in `process.cwd()` ← empty cwd parameter
+1. `git init` runs in `process.cwd()` <- empty cwd parameter
 2. WorktreeManager called with empty projectDir
 3. Session.create() passed empty string
 4. Test accessed `context.tempDir` before beforeEach
