@@ -1,5 +1,5 @@
 ---
-name: use-git-worktrees
+name: git-worktrees
 description: Create or manage isolated git worktrees for parallel feature work, experiments, reviews, or bug fixes without disturbing the current checkout. Use when the user wants a separate workspace or branch, asks to isolate work before implementation, or when working in the current tree risks conflicts or mixing unrelated changes.
 ---
 

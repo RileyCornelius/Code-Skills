@@ -7,7 +7,8 @@ Reusable coding skills for AI agents.
 - `code-brainstorming`: Turn coding ideas into approved designs and planning-ready implementation briefs before coding starts.
 - `code-debugging`: Investigate bugs, failing tests, broken builds, and unexpected behavior before proposing fixes.
 - `code-reviewing`: Review code for correctness, regressions, testing gaps, and merge readiness.
-- `use-git-worktrees`: Create isolated git worktrees when feature work needs a separate workspace.
+- `git-commit`: Write clear, imperative commit messages using the repository's commit style.
+- `git-worktrees`: Create isolated git worktrees when feature work needs a separate workspace.
 
 ## Install With the `skills` CLI
 
@@ -15,12 +16,6 @@ Install from the GitHub repo:
 
 ```bash
 npx skills add RileyCornelius/Code-Skills
-```
-
-List the skills exposed by this repository:
-
-```bash
-npx skills add RileyCornelius/Code-Skills --list
 ```
 
 ## Manual Install
