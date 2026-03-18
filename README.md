@@ -11,13 +11,14 @@
 
 ### Install Global (Clone and Copy)
 
+Codex (.agents):
 
 ```bash
 git clone https://github.com/rileycornelius/Code-Skills.git
 cp -r rileycornelius/Code-Skills/skills/* .agents/skills/
 ```
 
-## Install Claude Code (.claude)
+Claude Code:
 
 ```bash
 git clone https://github.com/rileycornelius/Code-Skills.git
