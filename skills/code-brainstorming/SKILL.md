@@ -7,7 +7,7 @@ description: Turn coding ideas into approved designs and planning-ready implemen
 
 Help turn ideas into fully formed designs and specs through natural collaborative dialogue.
 
-Start by understanding the current project context, then ask questions one at a time to refine the idea. Once you understand what you're building, present the design and get user approval.
+Start by understanding the current project context, then ask questions in a numbered list to refine the idea. Once you understand what you're building, present the design and get user approval.
 
 ## Hard Gate
 
@@ -23,11 +23,11 @@ Start by understanding the current project context, then ask questions one at a 
 - Follow existing patterns instead of inventing unrelated ones.
 - Assess scope early. If the request spans multiple independent subsystems, say so and help decompose it before refining one slice.
 
-### 2. Clarify intent one question at a time
+### 2. Clarify intent
 
-- Ask one question per message.
-- Prefer concrete multiple-choice questions when they reduce ambiguity.
 - Focus on purpose, constraints, success criteria, and boundaries the user cares about.
+- Prefer concrete multiple-choice questions when they reduce ambiguity.
+- Prefer open ended question other wise.
 - Do not ask questions that the repository can answer.
 
 ### 3. Identify gray areas
@@ -52,7 +52,7 @@ Start by understanding the current project context, then ask questions one at a 
 ### 6. Synthesize the approved brief
 
 - Produce a concise planning brief in chat after the design is approved.
-- Make the brief concrete enough that a planner or engineer can use it without repeating discovery.
+- Make the brief but concrete enough
 
 Use this structure:
 
@@ -72,10 +72,9 @@ Use this structure:
 
 ## Key Principles
 
-- **One question at a time** - Don't overwhelm with multiple questions
 - **Multiple choice preferred** - Easier to answer than open-ended when possible
 - **YAGNI ruthlessly** - Remove unnecessary features from all designs
-- **Explore alternatives** - Always propose 2-3 approaches before settling
+- **Explore alternatives** - Propose 2-3 approaches before settling
 - **Incremental validation** - Present design, get approval before moving on
 - **Be flexible** - Go back and clarify when something doesn't make sense
-- **Question** - Call out assumptions explicitly.
+- **Question** - Call out assumptions explicitly
