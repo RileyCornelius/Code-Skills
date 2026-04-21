@@ -21,7 +21,7 @@ npx skills add RileyCornelius/Code-Skills
 ```
 
 ```bash
-gh skill install RileyCornelius/Code-Skills
+gh skills install RileyCornelius/Code-Skills
 ```
 
 ## Manual Install

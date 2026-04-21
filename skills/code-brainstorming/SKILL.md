@@ -42,34 +42,6 @@ Start by understanding the current project context, then ask questions in a numb
 - Lead with the recommended option.
 - Explain tradeoffs in terms of codebase fit, complexity, flexibility, and user goals.
 
-### 5. Present the design in sections
-
-- Present small sections sized to the complexity of the change.
-- Cover the parts that matter: architecture, components, data flow, edge cases, error handling, and testing.
-- Ask for confirmation after each section before moving on.
-- Revise when the user pushes back or new constraints appear.
-
-### 6. Synthesize the approved brief
-
-- Produce a concise planning brief in chat after the design is approved.
-- Make the brief but concrete enough
-
-Use this structure:
-
-```md
-## Goal
-
-## Scope / Non-Goals
-
-## Key Decisions
-
-## Recommended Approach
-
-## Risks / Unknowns
-
-## Open Follow-Ups
-```
-
 ## Key Principles
 
 - **Multiple choice preferred** - Easier to answer than open-ended when possible
